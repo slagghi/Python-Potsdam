@@ -1,11 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Jun 13 12:50:56 2018
-
-@author: jacopo
-"""
-
 import scipy.io as sio
 import numpy as np
 
