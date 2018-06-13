@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import tensorflow as tf
-import scipy.io as sio
 import numpy as np
 
 
