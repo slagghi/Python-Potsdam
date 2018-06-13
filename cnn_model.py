@@ -1,11 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Jun  8 12:07:29 2018
-
-@author: jacopo
-"""
-
 
 import tensorflow as tf
 import scipy.io as sio
@@ -209,6 +203,8 @@ def conv_net(images):
     
     # RECAP: I should now have in output a tensor of shape [batch_size,65,65,6]
     # 6 is the number of classes, and the vector represents a 6-dimension matrix of class scores
+
+# I still need to download the dataset in order to give something as input and get the predictions
 
 #logits=conv_net(images)
 #prediction=tf.nn.softmax(logits)
