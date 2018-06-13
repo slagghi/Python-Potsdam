@@ -13,171 +13,62 @@ import numpy as np
 
 
 # READING PARAM FILES FROM PRE-TRAINED POTSDAM NETWORK
-
+def load_param(name):
+    path='mat2numpy/'+name+'.npy'
+    out=np.load(path)
+    return out
 # Layer 1 Parameters (convolutional, 7x7, 5->64)
-l1f=sio.loadmat("l1f.mat")
-l1b=sio.loadmat("l1b.mat")
-
-f1=l1f['l1f']
-b1=l1b['l1b']
-
-# cleanup
-del l1f,l1b
-
+f1=load_param('l1f')
+b1=load_param('l1b')
 # Layer 2 Parameters (batch normalization)
-l2m=sio.loadmat("l2m.mat")
-l2b=sio.loadmat("l2b.mat")
-l2x=sio.loadmat("l2x.mat")
-
-m2=l2m['l2m']
-b2=l2b['l2b']
-x2=l2x['l2x']
-
-#cleanup
-del l2m,l2b,l2x
-
+m2=load_param('l2m')
+b2=load_param('l2b')
+x2=load_param('l2x')
 # Layer 6 Parameters (convolutional, 5x5, 64->64)
-l6f=sio.loadmat("l6f.mat")
-l6b=sio.loadmat("l6b.mat")
-
-f6=l6f['l6f']
-b6=l6b['l6b']
-
-#cleanup
-del l6f,l6b
-
+f6=load_param('l6f')
+b6=load_param('l6b')
 # Layer 7 Parameters (batch normalization)
-l7m=sio.loadmat("l7m.mat")
-l7b=sio.loadmat("l7b.mat")
-l7x=sio.loadmat("l7x.mat")
-
-m7=l7m['l7m']
-b7=l7b['l7b']
-x7=l7x['l7x']
-
-#cleanup
-del l7m,l7b,l7x
-
+m7=load_param('l7m')
+b7=load_param('l7b')
+x7=load_param('l7x')
 # Layer 11 Parameters (convolutional, 3x3, 64->128)
-l11f=sio.loadmat("l11f.mat")
-l11b=sio.loadmat("l11b.mat")
-
-f11=l11f['l11f']
-b11=l11b['l11b']
-
-#cleanup
-del l11f,l11b
-
+f11=load_param('l11f')
+b11=load_param('l11b')
 # Layer 12 Parameters (batch normalization)
-l12m=sio.loadmat("l12m.mat")
-l12b=sio.loadmat("l12b.mat")
-l12x=sio.loadmat("l12x.mat")
-
-m12=l12m['l12m']
-b12=l12b['l12b']
-x12=l12x['l12x']
-
-#cleanup
-del l12m,l12b,l12x
-
+m12=load_param('l12m')
+b12=load_param('l12b')
+x12=load_param('l12x')
 # Layer 16 Parameters (convolutional, 3x3, 128->256)
-l16f=sio.loadmat("l16f.mat")
-l16b=sio.loadmat("l16b.mat")
-
-f16=l16f['l16f']
-b16=l16b['l16b']
-
-#cleanup
-del l16f,l16b
-
+f16=load_param('l16f')
+b16=load_param('l16b')
 # Layer 17 Parameters (batch normalization)
-l17m=sio.loadmat("l17m.mat")
-l17b=sio.loadmat("l17b.mat")
-l17x=sio.loadmat("l17x.mat")
-
-m17=l17m['l17m']
-b17=l17b['l17b']
-x17=l17x['l17x']
-
-#cleanup
-del l17m,l17b,l17x
-
+m17=load_param('l17m')
+b17=load_param('l17b')
+x17=load_param('l17x')
 # Layer 20 Parameters (deconvolutional, 3x3, 256->512, [2,2] upsampling)
-l20f=sio.loadmat("l20f.mat")
-l20b=sio.loadmat("l20b.mat")
-
-f20=l20f['l20f']
-b20=l20b['l20b']
-
-#cleanup
-del l20f,l20b
-
+f20=load_param('l20f')
+b20=load_param('l20b')
 # Layer 21 Parameters (batch normalization)
-l21m=sio.loadmat("l21m.mat")
-l21b=sio.loadmat("l21b.mat")
-l21x=sio.loadmat("l21x.mat")
-
-m21=l21m['l21m']
-b21=l21b['l21b']
-x21=l21x['l21x']
-
-#cleanup
-del l21m,l21b,l21x
-
+m21=load_param('l21m')
+b21=load_param('l21b')
+x21=load_param('l21x')
 # Layer 24 Parameters (deconvolutional, 3x3, 512->512, [2,2] upsampling)
-l24f=sio.loadmat("l24f.mat")
-l24b=sio.loadmat("l24b.mat")
-
-f24=l24f['l24f']
-b24=l24b['l24b']
-
-#cleanup
-del l24f,l24b
-
+f24=load_param('l24f')
+b24=load_param('l24b')
 # Layer 25 Parameters (batch normalization)
-l25m=sio.loadmat("l25m.mat")
-l25b=sio.loadmat("l25b.mat")
-l25x=sio.loadmat("l25x.mat")
-
-m25=l25m['l25m']
-b25=l25b['l25b']
-x25=l25x['l25x']
-
-#cleanup
-del l25m,l25b,l25x
-
+m25=load_param('l25m')
+b25=load_param('l25b')
+x25=load_param('l25x')
 # Layer 28 Parameters (deconvolutional, 3x3, 512->512, [2,2] upsampling)
-l28f=sio.loadmat("l28f.mat")
-l28b=sio.loadmat("l28b.mat")
-
-f28=l28f['l28f']
-b28=l28b['l28b']
-
-#cleanup
-del l28f,l28b
-
+f28=load_param('l28f')
+b28=load_param('l28b')
 # Layer 29 Parameters (batch normalization)
-l29m=sio.loadmat("l29m.mat")
-l29b=sio.loadmat("l29b.mat")
-l29x=sio.loadmat("l29x.mat")
-
-m29=l29m['l29m']
-b29=l29b['l29b']
-x29=l29x['l29x']
-
-#cleanup
-del l29m,l29b,l29x
-
+m29=load_param('l29m')
+b29=load_param('l29b')
+x29=load_param('l29x')
 # Layer 32 Parameters (convolutional, 1x1, 512->6)
-l32f=sio.loadmat("l32f.mat")
-l32b=sio.loadmat("l32b.mat")
-
-f32=l32f['l32f']
-b32=l32b['l32b']
-
-#cleanup
-del l32f,l32b
-
+f32=load_param('l32f')
+b32=load_param('l32b')
 
 
 # CNN MODEL
