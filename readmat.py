@@ -14,8 +14,6 @@ import numpy as np
 
 # READING PARAM FILES FROM PRE-TRAINED POTSDAM NETWORK
 
-M=sio.loadmat("Potsdam-denseprediction-distribution.mat")
-
 # Layer 1 Parameters (convolutional, 7x7, 5->64)
 l1f=sio.loadmat("l1f.mat")
 l1b=sio.loadmat("l1b.mat")
