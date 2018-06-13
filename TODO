@@ -2,6 +2,8 @@
 
  - Check the dimensionality of the output of the ReLU layers, and if it's compatible with conv and convt layers
 
+ - Check if the dimensionality of each layer is compatible with the next
+
  - Try to understand how big the batch size should be, and if it matters
 
  - Download the dataset and feed a 65x65 patch to the CNN to see what happens
